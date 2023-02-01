@@ -102,7 +102,25 @@ do
         i2++;
       }      
       Console.WriteLine($"Сумма чисел от 1 до {n2} равна: {sum} ");
-    }  
+    }
+
+//3. Возведите число А в натуральную степень B используя цикл
+  if (otvet == 3)
+    {
+      int a3, b3, i3 = 0,step = 1;
+      Console.Write("Введите число для возведения в натуральную степь: ");
+      a3 = Proverca_chisla();
+
+      Console.Write("Введите натуральную степь: ");
+      b3 = Proverca_chisla();
+
+      while (i3 < b3)
+      {
+        step = step * a3;
+        i3++;
+      }      
+      Console.WriteLine($"Число {a3} в натуральную степень {b3} равна: {step} ");
+    }   
 
 //Конец тела задач    
   Console.Write("Нажмите <Enter> для продолжения... ");
