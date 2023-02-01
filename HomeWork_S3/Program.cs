@@ -86,10 +86,23 @@ do
       {
         Console.WriteLine($"Куб числа {i1} равен: {i1*i1*i1}");
         i1++;
-      }      
-      
+      }           
     }
-  
+
+//2. Найти сумму чисел от 1 до А
+  if (otvet == 2)
+    {
+      int n2, i2 = 1,sum = 0;
+      Console.Write("Введите число до которого нужно вычеслять сумму чисел: ");
+      n2 = Proverca_chisla();
+
+      while (i2 < n2)
+      {
+        sum = sum + i2;
+        i2++;
+      }      
+      Console.WriteLine($"Сумма чисел от 1 до {n2} равна: {sum} ");
+    }  
 
 //Конец тела задач    
   Console.Write("Нажмите <Enter> для продолжения... ");
