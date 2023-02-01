@@ -243,6 +243,30 @@ do
       }*/      
     }
 
+//9. Задать массив, заполнить случайными положительными трёхзначными числами. Показать количество нечетныхчетных чисел
+  if (otvet == 9)
+    {
+      int i9 = 0, j9 = 0,
+       n9,min9,max9;
+
+      Console.Write("Введите размер массива: ");
+      n9 = Proverca_chisla();
+      Console.Write("Введите минимальное значения рандома для массива: ");
+      min9 = Proverca_chisla();
+      Console.Write("Введите максимальное значения рандома для массива: ");
+      max9 = Proverca_chisla();
+
+      int[] m9  = new int [n9];
+      m9 = R_Mas(m9,min9,max9);
+
+      while (i9 < m9.Length)
+      { if (m9[i9]%2 ==0) {j9++;}
+        i9++;
+      }
+
+      Console.WriteLine($"Нечетных элементо встречается: {j9} раз.");
+    }
+
 //Конец тела задач    
   Console.Write("Нажмите <Enter> для продолжения... ");
       while (Console.ReadKey().Key != ConsoleKey.Enter) {}
