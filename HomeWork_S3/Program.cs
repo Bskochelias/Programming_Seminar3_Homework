@@ -96,7 +96,7 @@ do
       Console.Write("Введите число до которого нужно вычеслять сумму чисел: ");
       n2 = Proverca_chisla();
 
-      while (i2 < n2)
+      while (i2 <= n2)
       {
         sum = sum + i2;
         i2++;
@@ -127,13 +127,12 @@ do
     {
       int a4, i4 = 1,copy, delitel = 2147483646;
       string? chislo;
+
       Console.Write("Введите число, для определения длины: ");
       a4 = Proverca_chisla();
 
       if (a4 < 0) {a4 = a4*-1;} 
       chislo = Convert.ToString(a4);
-      
-      Console.WriteLine($"Длина числа через опредления строки равна: {chislo.Length}");
 
       copy = a4;
       while (copy > 9)
@@ -143,10 +142,25 @@ do
         if (copy != a4)
         i4++;
       }
-
+      Console.WriteLine($"Длина числа через опредления строки равна: {chislo.Length}");
       Console.WriteLine($"Длина строки через остаток равна: {i4}");
-
     }
+
+//5. Написать программу вычисления произведения чисел от 1 до N
+  if (otvet == 5)
+    {
+      int n5, i5 = 1, proiz = 1;
+      Console.Write("Введите число до которого нужно вычеслять произведения чисел: ");
+      n5 = Proverca_chisla();
+
+      while (i5 <= n5)
+      {
+        proiz = proiz * i5;
+        i5++;
+      }      
+      Console.WriteLine($"Произведения чисел от 1 до {n5} равна: {proiz} ");
+    }
+
 //Конец тела задач    
   Console.Write("Нажмите <Enter> для продолжения... ");
       while (Console.ReadKey().Key != ConsoleKey.Enter) {}
