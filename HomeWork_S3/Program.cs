@@ -31,6 +31,18 @@ int Proverca_chisla()
   return num;
 }
 
+//Функция для заполнения массива рандомом
+int[] R_Mas(int[] f,int min,int max)
+{
+  int j=0;
+  while (j < f.Length)
+      {
+        f[j]= new Random().Next(min,max);
+        j++;        
+      }
+  return f;
+}
+
 
 
 int otvet = 1;
@@ -195,6 +207,40 @@ do
         Console.WriteLine($"Элемент {i7+1} равен: {array[i7]} ");
         i7++;
       }      
+    }
+
+//8. Определить, присутствует ли в заданном массиве, некоторое число
+  if (otvet == 8)
+    {
+      int i8 = 0, j8 = 0,
+       n8,min8,max8,zn;
+
+      Console.Write("Введите размер массива: ");
+      n8 = Proverca_chisla();
+      Console.Write("Введите минимальное значения рандома для массива: ");
+      min8 = Proverca_chisla();
+      Console.Write("Введите максимальное значения рандома для массива: ");
+      max8 = Proverca_chisla();
+      Console.Write("Введите значения для поиска в массиве: ");
+      zn = Proverca_chisla();
+
+      int[] m8  = new int [n8];
+      m8 = R_Mas(m8,min8,max8);
+
+      while (i8 < m8.Length)
+      {
+        if (m8[i8] == zn)
+        {
+          j8++;
+        }
+        i8++;
+      }
+      Console.WriteLine($"Элемент {zn} встречается: {j8} раз.");
+      /*while (i8 < m8.Length)
+      {
+        Console.WriteLine($"Элемент {i8+1} равен: {m8[i8]} ");
+        i8++;
+      }*/      
     }
 
 //Конец тела задач    
