@@ -122,6 +122,31 @@ do
       Console.WriteLine($"Число {a3} в натуральную степень {b3} равна: {step} ");
     }   
 
+//4. Подсчитать сумму цифр в числе
+  if (otvet == 4)
+    {
+      int a4, i4 = 1,copy, delitel = 2147483646;
+      string? chislo;
+      Console.Write("Введите число, для определения длины: ");
+      a4 = Proverca_chisla();
+
+      if (a4 < 0) {a4 = a4*-1;} 
+      chislo = Convert.ToString(a4);
+      
+      Console.WriteLine($"Длина числа через опредления строки равна: {chislo.Length}");
+
+      copy = a4;
+      while (copy > 9)
+      {
+        copy=copy%delitel;
+        delitel= delitel/10;
+        if (copy != a4)
+        i4++;
+      }
+
+      Console.WriteLine($"Длина строки через остаток равна: {i4}");
+
+    }
 //Конец тела задач    
   Console.Write("Нажмите <Enter> для продолжения... ");
       while (Console.ReadKey().Key != ConsoleKey.Enter) {}
