@@ -161,6 +161,22 @@ do
       Console.WriteLine($"Произведения чисел от 1 до {n5} равна: {proiz} ");
     }
 
+//6. Показать кубы чисел, заканчивающихся на четную цифру
+  if (otvet == 6)
+    {
+      int n6, i6 = 1,kub;
+      Console.Write("Введите число до которого нужно вывести кубы чисел заканчивающихся на четную цифру: ");
+      n6 = Proverca_chisla();
+
+      while (i6 <= n6)
+      {
+        kub = i6 * i6 * i6;
+        if (kub%2==0)
+        Console.WriteLine($"Куб числа {i6} равна: {kub} ");
+        i6++;
+      }      
+    }
+
 //Конец тела задач    
   Console.Write("Нажмите <Enter> для продолжения... ");
       while (Console.ReadKey().Key != ConsoleKey.Enter) {}
