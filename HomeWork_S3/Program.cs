@@ -69,7 +69,7 @@ do
       while (Console.ReadKey().Key != ConsoleKey.Enter) {}      
     }
 
-  } while (otvet > 5 ^ otvet < 1);
+  } while (otvet > 14 ^ otvet < 1);
 
   Console.Clear();
 
@@ -78,10 +78,15 @@ do
   //1. Найти кубы чисел от 1 до N
   if (otvet == 1)
     {
-      int a1;
-      Console.Write("Введите число: ");
-      a1 = Proverca_chisla();
-            
+      int n1, i1 = 1;
+      Console.Write("Введите число до которого вычеслять кубы чисел: ");
+      n1 = Proverca_chisla();
+
+      while (i1 < n1)
+      {
+        Console.WriteLine($"Куб числа {i1} равен: {i1*i1*i1}");
+        i1++;
+      }      
       
     }
   
