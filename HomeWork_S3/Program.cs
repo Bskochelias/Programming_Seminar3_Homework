@@ -177,6 +177,26 @@ do
       }      
     }
 
+//7. Задать массив из 8 элементов, заполненных нулями и единицами вывести их на экран
+  if (otvet == 7)
+    {
+      int i7 = 0;
+      int[] array = new int [8];
+      
+      while (i7 < array.Length)
+      {
+        array[i7]= new Random().Next(0,2);
+        i7++;
+      }
+
+      i7=0;
+      while (i7 < array.Length)
+      {
+        Console.WriteLine($"Элемент {i7+1} равен: {array[i7]} ");
+        i7++;
+      }      
+    }
+
 //Конец тела задач    
   Console.Write("Нажмите <Enter> для продолжения... ");
       while (Console.ReadKey().Key != ConsoleKey.Enter) {}
