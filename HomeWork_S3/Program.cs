@@ -339,12 +339,43 @@ do
         i12++;
       }
 
+      /*
       i12=0;
       while (i12 < m12.Length)
       {
         Console.WriteLine($"Элемент {i12} равен: {m12[i12]} ");
         i12++;
-      } 
+      } */
+    }
+
+//13. В Указанном массиве вещественных чисел найдите разницу между максимальным и минимальным элементом
+  if (otvet == 13)
+    {
+      int i13 = 0,
+       n13, min13, max13;
+
+      Console.Write("Введите размер массива: ");
+      n13 = Proverca_chisla();
+      Console.Write("Введите минимальное значения рандома для массива: ");
+      min13 = Proverca_chisla();
+      Console.Write("Введите максимальное значения рандома для массива: ");
+      max13 = Proverca_chisla();
+
+      int[] m13  = new int [n13];
+      m13 = R_Mas(m13,min13,max13);
+      
+      int max_chislo = m13[0], min_chislo = m13[0];
+
+      while (i13 < m13.Length)
+      { 
+        if (m13[i13]>max_chislo){max_chislo=m13[i13];}
+        if (m13[i13]<min_chislo){min_chislo=m13[i13];}
+        i13++;
+      }
+
+      Console.WriteLine($"Минимальное число равно: {min_chislo}");
+      Console.WriteLine($"Маскимальное число равно: {max_chislo}");
+      Console.WriteLine($"Разница между максимальным и минимальным элементом равна: {max_chislo-min_chislo}");    
     }
 
 //Конец тела задач    
