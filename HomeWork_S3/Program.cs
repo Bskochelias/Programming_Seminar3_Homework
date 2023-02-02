@@ -291,6 +291,61 @@ do
     }
 
 //11. Найти сумму чисел одномерного массива стоящих на нечетной позиции
+  if (otvet == 11)
+    {
+      int i11 = 0, sum = 0,
+       n11, min11, max11;
+
+      Console.Write("Введите размер массива: ");
+      n11 = Proverca_chisla();
+      Console.Write("Введите минимальное значения рандома для массива: ");
+      min11 = Proverca_chisla();
+      Console.Write("Введите максимальное значения рандома для массива: ");
+      max11 = Proverca_chisla();
+
+      int[] m11  = new int [n11];
+      m11 = R_Mas(m11,min11,max11);
+
+      while (i11 < m11.Length)
+      { if (i11%2!=0) {sum=sum+m11[i11];}
+        //Console.WriteLine(sum+" "+ m11[i11]+" "+i11);
+        i11++;
+      }
+      Console.WriteLine($"Cумма чисел одномерного массива стоящих на нечетной позиции: {sum}.");      
+    }
+
+//12. Найти произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент, второй и предпоследний и т.д.
+  if (otvet == 12)
+    {
+      int i12 = 0, pr = 1,
+       n12, min12, max12;
+
+      Console.Write("Введите размер массива: ");
+      n12 = Proverca_chisla();
+      Console.Write("Введите минимальное значения рандома для массива: ");
+      min12 = Proverca_chisla();
+      Console.Write("Введите максимальное значения рандома для массива: ");
+      max12 = Proverca_chisla();
+
+      int[] m12  = new int [n12];
+      m12 = R_Mas(m12,min12,max12);
+
+      Console.Clear();
+
+      while (i12 < m12.Length/2)
+      { 
+        pr = m12[i12]*m12[m12.Length-i12-1];
+        Console.WriteLine($"Произведение пар чисел {i12} и {m12.Length-1-i12} в одномерном массиве равен: {pr}");
+        i12++;
+      }
+
+      i12=0;
+      while (i12 < m12.Length)
+      {
+        Console.WriteLine($"Элемент {i12} равен: {m12[i12]} ");
+        i12++;
+      } 
+    }
 
 //Конец тела задач    
   Console.Write("Нажмите <Enter> для продолжения... ");
