@@ -24,7 +24,7 @@ int Proverca_chisla()
         break;                                                   // обработка при успехе и выход из цикла
     else                                                         // обработка при ошибке
     {
-        Console.WriteLine("[ERROR]: Не коректные данные по пробуйте еще раз!");
+        Console.WriteLine("[ERROR]: Некоректные данные по пробуйте еще раз!");
         Console.Write("Введите число: ");
     }
     }
